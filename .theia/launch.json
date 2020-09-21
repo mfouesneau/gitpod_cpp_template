@@ -6,10 +6,11 @@
       {
           "type": "gdb",
           "request": "launch",
-          "name": "Launch Program",
+          "name": "Compile & Run current file",
           "target": "${fileDirname}/${fileBasenameNoExtension}",
           "cwd": "${workspaceRoot}",
-          "valuesFormatting": "parseText"
+          "valuesFormatting": "parseText",
+          "preLaunchTask": "C/C++: g++ build active file"
       }
     ]
 }
