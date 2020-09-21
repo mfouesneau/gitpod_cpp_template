@@ -1,0 +1,50 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: g++-8 build active file",
+            "command": "/usr/bin/g++-8",
+            "args": [
+                "-I./include",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: clang build active file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-I./include",
+                "-std=c++1y",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
