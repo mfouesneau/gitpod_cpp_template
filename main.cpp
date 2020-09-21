@@ -1,4 +1,5 @@
 #include <iostream>
+#include "example.hpp"
 
 int main() {
     int A[3] {3, 5, 7};
@@ -7,4 +8,6 @@ int main() {
         std::cout << val << " ";
     }
     std::cout << "\n";
+
+    example::example1();
 }
