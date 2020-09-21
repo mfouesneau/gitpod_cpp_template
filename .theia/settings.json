@@ -1,0 +1,13 @@
+{
+    "cpp.buildConfigurations": [{
+        "name": "Release",
+        "directory": "${workspaceRoot}"
+    },{
+        "name": "Debug",
+        "directory": "${workspaceRoot}"
+    }],
+    "cpp.clangdArgs": "--background-index",
+    "clangd.arguments": [
+        "--include-directory ${workspaceRoot}/include"
+    ]
+}
