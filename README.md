@@ -7,3 +7,8 @@ Gitpod is a nice online IDE very similar to VSCode but using Eclipse Theia (http
 In particular it allows pair-coding while still being able to compile and run codes.
 
 This repository holds a very basic workspace to start a C++ project and being able to work with gitpod.
+
+.. Note:: 
+
+  * clangd extension seems to mess up with the compilation options to find dependencies. 
+  * I also put the .vscode equivalent so it can be tested offline (works also with vscodium)
