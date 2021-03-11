@@ -25,5 +25,6 @@ RUN echo /usr/lib/x86_64-linux-gnu >> /etc/ld.so.conf
 RUN echo /usr/lib/x86_64-linux-gnu/hdf5/serial >> /etc/ld.so.conf 
 RUN cat /etc/ld.so.conf 
 RUN ldconfig
+RUN pip install conan 
 
 USER gitpod
