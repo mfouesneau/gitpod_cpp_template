@@ -62,3 +62,4 @@ graph_info.json
 
 # build directories
 bin/*
+build/*
