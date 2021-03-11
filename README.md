@@ -47,3 +47,42 @@ Some notes
   * :warning: clangd extension seems to mess up with the compilation options to find dependencies. 
   * I also put the .vscode equivalent so it can be tested offline (works also with vscodium)
 
+
+## Using conan
+
+requires to install it. I use python installation 
+
+```pip install conan```
+
+You may have to look for the library you need, e.g:
+```
+conan search xtensor -r conan-center
+Existing package recipes:
+
+xtensor/0.21.2
+xtensor/0.21.3
+xtensor/0.21.4
+xtensor/0.21.5
+```
+
+add your requirements to the `conanfile.txt`, e.g, 
+```yaml
+[requires]
+ xtensor/0.21.5
+
+[generators]
+ cmake
+ ```
+(don't forget the generators section)
+
+Update your `CMakeLists.txt` to include the conan libraries, for instance before the targets
+```cmake
+include(conanbuildinfo.cmake)
+conan_basic_setup()
+```
+And for the relevant targets
+```cmake
+target_link_libraries(example ${CONAN_LIBS})
+```
+
+Finally you will need to run `conan install` before `cmake`
