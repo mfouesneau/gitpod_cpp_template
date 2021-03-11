@@ -22,7 +22,7 @@ message( STATUS "LAPACK found: ${lapack_libraries}" )
 # add conan
 # ---------
 # target_link_libraries(example ${CONAN_LIBS})
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+include(conanbuildinfo.cmake)
 conan_basic_setup()
 
 # add local includes
