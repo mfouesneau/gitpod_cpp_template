@@ -26,8 +26,8 @@ RUN echo /usr/lib/x86_64-linux-gnu/hdf5/serial >> /etc/ld.so.conf
 RUN cat /etc/ld.so.conf 
 RUN ldconfig
 RUN apt install -y \
-	gnuplot-x11 \
-	libglfw3-dev \
+	gnuplot \
+	libglfw3-dev
 RUN pip install conan 
 
 USER gitpod
