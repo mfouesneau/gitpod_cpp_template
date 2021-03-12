@@ -11,8 +11,10 @@ USER root
 # =====================
 
 # HDF5 libraries and links
-RUN apt-get update \
-    && apt-get -y install \
+RUN DEBIAN_FRONTEND=noninteractive \
+    apt-get update \
+    && DEBIAN_FRONTEND=noninteractive \
+    apt-get -y install \
         libblas-dev \
         liblapack-dev \ 
         libhdf5-dev \
