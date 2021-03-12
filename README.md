@@ -87,3 +87,9 @@ target_link_libraries(example ${CONAN_LIBS})
 ```
 
 Finally you will need to run `conan install` before `cmake`
+
+## Using matplotplusplus
+
+In this branch I installed a plotting package: `matplotplusplus`
+
+It requires some gnuplot backend (set in the dockerfile), but as the DISPLAY is not set, you may need to set `GNUTERM=png` or something appropriate.
