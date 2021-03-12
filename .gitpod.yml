@@ -1,6 +1,14 @@
+
 image:
   file: .gitpod.Dockerfile
 
 tasks:
   - init: conan install . && cmake . && make
     command: 'echo "bin/main" to run the project'
+
+vscode:
+  extensions:
+    - ms-vscode.cmake-tools
+    - genuitecllc.codetogether
+    - eamodio.gitlens
+    - analytic-signal.preview-pdf
