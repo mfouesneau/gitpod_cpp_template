@@ -21,7 +21,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
         libhdf5-serial-dev \
         libhdf5-103 \
         libhdf5-cpp-103 \
-	gnuplot-x11 \
+	gnuplot-nox \
 	libglfw3-dev \
     && apt-get autoremove -yq \
     && rm -rf /var/lib/apt/lists/* 
