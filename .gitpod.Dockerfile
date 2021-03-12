@@ -19,7 +19,7 @@ RUN apt-get update \
         libhdf5-serial-dev \
         libhdf5-103 \
         libhdf5-cpp-103 \
-	gnuplot \
+	gnuplot-x11 \
 	libglfw3-dev \
     && apt-get autoremove -yq \
     && rm -rf /var/lib/apt/lists/* 
